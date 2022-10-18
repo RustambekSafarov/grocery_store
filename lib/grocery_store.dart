@@ -182,8 +182,10 @@ double getTotalPricesMeat(List products) {
       total += product['price'];
     }
   }
+  String s = '$total';
+  double d = double.parse(s.substring(0, 5));
 
-  return total;
+  return d;
 }
 
 // Define a function that finds the most expensive product from a list of products
@@ -439,5 +441,5 @@ String getCheapestMeat(List products) {
   price.sort();
   cheapest = name[nam.indexOf(price[0])];
 
-  return cheapest; 
+  return cheapest;
 }
